@@ -9,7 +9,7 @@ export class UserService {
 
   async createUser(user: CreateUserDto) {
     user.password = await bcrypt.hash(user.password, 18);
-    return this.userRepository.createUser(user);
+    return await this.userRepository.createUser(user);
   }
 
   async getUser(id: string) {
@@ -41,6 +41,6 @@ export class UserService {
   }
 
   async listUsers() {
-    return this.userRepository.listUsers();
+    return await this.userRepository.listUsers();
   }
 }

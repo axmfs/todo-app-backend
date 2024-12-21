@@ -8,21 +8,21 @@ export class UserController {
 
   @Get()
   async listUsers() {
-    return this.userService.listUsers();
+    return await this.userService.listUsers();
   }
 
   @Get(":id")
   async getUser(@Param() params: any) {
-    return this.userService.getUser(params.id);
+    return await this.userService.getUser(params.id);
   }
 
   @Post()
   async createUser(@Body() data: CreateUserDto) {
-    return this.userService.createUser(data);
+    return await this.userService.createUser(data);
   }
 
   @Delete(":id")
   async deleteUser(@Param() params: any) {
-    return this.userService.deleteUser(params.id);
+    return await this.userService.deleteUser(params.id);
   }
 }
