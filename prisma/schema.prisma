@@ -16,8 +16,7 @@ model User {
 model ToDo {
   id String @db.VarChar(36) @id @default(uuid())
   userId String
-  emoji String?
-  notifyBeforeDueDate String?
   dueDate DateTime?
+  title String
   description String
 }

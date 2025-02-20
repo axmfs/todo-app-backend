@@ -1,7 +1,6 @@
 export class CreateTodoDto {
   userId: string;
-  emoji?: string;
-  notifyBeforeDueDate?: string;
+  title: string;
   dueDate?: Date;
   description: string;
 };
